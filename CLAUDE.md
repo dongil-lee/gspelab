@@ -58,6 +58,13 @@ It fixes relative paths for each page's depth and sets `aria-current="page"` (an
 - **Seminars:** date and time, title, speaker linked to their personal website, (affiliation). Leave out the room and the host.
 - **Workshop programs:** copy names, affiliations and titles exactly as printed on the posters (`_source/Workshop/<year>/…poster.pdf`). Mark anything unreadable `[CHECK]`. Each panel: label + name, then presenter name (linked to their personal website), (affiliation), title. When adding a year: new `workshop/<year>/` page, add it to `NAV` in `_tools/layout.py`, and update the table in `workshop/index.html`.
 
+## Publishing
+
+- Live at **https://gspelab.org**, served by GitHub Pages from the `main` branch root of `dongil-lee/gspelab`. Pushing to `main` publishes; GitHub rebuilds in 1–2 minutes.
+- Domain registered at Squarespace Domains (apex A records → GitHub Pages IPs, `www` CNAME → `dongil-lee.github.io`, TXT record verifying the domain on GitHub). The `CNAME` file in the repo holds the custom domain — never delete it.
+- Workflow for any change: `git pull` first (editing the domain in GitHub's settings commits to `CNAME`), edit, re-run `python3 _tools/layout.py` if nav/footer/CSS/JS changed, check locally, then commit and `git push`.
+- The `gh` CLI is installed and logged in as `dongil-lee`; git uses it for credentials.
+
 ## Local preview
 
 Folder links need a web server (opening files directly shows directory listings):
