@@ -41,6 +41,8 @@ Every page has three marker pairs: `<!-- layout:head -->`, `<!-- layout:header -
 python3 _tools/layout.py
 ```
 
+**Also re-run it after any change to `assets/css/style.css` or `assets/js/nav.js`**: it stamps their links with a content hash (`style.css?v=…`) so browsers fetch the new file instead of a cached one (GitHub Pages caches for 10 minutes).
+
 It fixes relative paths for each page's depth and sets `aria-current="page"` (and `current-section` on the dropdown parent). New pages: copy an existing page (keep the markers), then re-run the script — it picks up every `index.html` outside `_*`, `.*` and `assets/`.
 
 ## Conventions
