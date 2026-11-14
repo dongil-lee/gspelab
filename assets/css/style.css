@@ -232,6 +232,7 @@ h2 { color: var(--navy); line-height: 1.3; }
 .button-primary:hover { background: var(--navy); border-color: var(--navy); color: #fff; }
 .button-secondary { color: var(--blue); }
 .button-secondary:hover { background: var(--bg-blue); color: var(--navy); }
+.button-small { padding: 4px 12px; font-size: 0.85rem; border-width: 1px; margin-top: 8px; }
 
 /* ---------- Home ---------- */
 
@@ -290,6 +291,10 @@ h2 { color: var(--navy); line-height: 1.3; }
 .pillar p { margin: 0; color: var(--muted); }
 
 /* ---------- People ---------- */
+
+.campus-photo { max-width: 743px; margin: 0 auto 40px; text-align: center; }
+.campus-photo img { width: 100%; border-radius: 6px; }
+.campus-photo figcaption { margin-top: 10px; font-size: 0.95rem; color: var(--muted); }
 
 .card-links {
   display: grid;
