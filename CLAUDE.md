@@ -23,7 +23,7 @@ assets/css/style.css        Shared styles (all pages)
 assets/js/nav.js            Mobile menu + dropdown toggles
 assets/js/lightbox.js       Click-to-enlarge overlay for any <a data-lightbox> wrapping an <img> (Workshop photo grid)
 assets/img/hero.jpg         Home wall photo (from _source/Workshop/select_photos/main.jpeg)
-assets/img/workshop/        Workshop grid photos (from select_photos/1–6)
+assets/img/workshop/        Workshop grid photos (from select_photos/1–12, same numbering)
 assets/img/people/          Headshots (slug names, e.g. dongil-lee.jpg)
 assets/img/logo/            Original logo files + web copies gspel-logo.png (header) and gspel-mark.png (footer)
 assets/img/favicon.png      From logo/small_logo_white.png
