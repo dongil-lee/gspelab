@@ -17,10 +17,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # (label, site path, children)
 NAV = [
-    ("About", "", []),
+    ("Home", "", []),
     ("People", "people/", [("Current", "people/current/"), ("Visiting", "people/visiting/"), ("Past", "people/past/")]),
     ("Research", "research/", []),
-    ("Workshop", "workshop/", [("2025", "workshop/2025/"), ("2026", "workshop/2026/")]),
+    ("Workshop", "workshop/", [("2026 (2nd)", "workshop/2026/"), ("2025 (1st)", "workshop/2025/")]),
     ("Seminar", "seminar/", []),
 ]
 
