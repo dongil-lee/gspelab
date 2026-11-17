@@ -7,7 +7,7 @@ Static site for the Global Strategy & Political Economy Lab (KDI School), hosted
 Clean URLs: each page is a folder with its own `index.html`.
 
 ```
-index.html                  About (Home): tagline, lab intro, wall photo, upcoming workshop, About the Lab (01/02)
+index.html                  Home: tagline, lab intro, wall photo, About the Lab (01/02), News (upcoming workshop card; add new items here)
 people/index.html           People landing — links to Current, Visiting, Past
 people/current/index.html   Current members (Faculty subsection; add a Student subsection when there are current students)
 people/visiting/index.html  Visiting scholars (faculty-style bio + "is visiting" note)
