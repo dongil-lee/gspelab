@@ -28,7 +28,8 @@ NAV = [
 # instead of reusing a cached one (GitHub Pages caches for 10 minutes).
 HEAD = """<link rel="icon" type="image/png" href="{r}assets/img/favicon.png">
   <link rel="stylesheet" href="{r}assets/css/style.css?v={css_v}">
-  <script src="{r}assets/js/nav.js?v={js_v}" defer></script>"""
+  <script src="{r}assets/js/nav.js?v={js_v}" defer></script>
+  <script src="{r}assets/js/lightbox.js?v={lb_v}" defer></script>"""
 
 HEADER = """<header class="site-header">
     <div class="container">
@@ -114,6 +115,7 @@ def version(rel_path):
 def main():
     css_v = version("assets/css/style.css")
     js_v = version("assets/js/nav.js")
+    lb_v = version("assets/js/lightbox.js")
     for path in pages():
         page = os.path.dirname(path)
         page = page + "/" if page else ""
@@ -122,7 +124,7 @@ def main():
         full = os.path.join(ROOT, path)
         with open(full, encoding="utf-8") as f:
             html = f.read()
-        html = replace_block(html, "head", HEAD.format(r=r, css_v=css_v, js_v=js_v), path)
+        html = replace_block(html, "head", HEAD.format(r=r, css_v=css_v, js_v=js_v, lb_v=lb_v), path)
         html = replace_block(html, "header", HEADER.format(r=r, home=home, items=render_nav(page, r, home)), path)
         html = replace_block(html, "footer", FOOTER.format(r=r), path)
         with open(full, "w", encoding="utf-8") as f:

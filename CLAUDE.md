@@ -21,6 +21,7 @@ assets/pdf/                 Workshop poster PDFs (copied from _source)
 assets/img/posters/         Poster page previews, rendered with `gs -sDEVICE=png16m -r110` then `sips --resampleWidth 1000`
 assets/css/style.css        Shared styles (all pages)
 assets/js/nav.js            Mobile menu + dropdown toggles
+assets/js/lightbox.js       Click-to-enlarge overlay for any <a data-lightbox> wrapping an <img> (Workshop photo grid)
 assets/img/hero.jpg         Home wall photo (from _source/Workshop/select_photos/main.jpeg)
 assets/img/workshop/        Workshop grid photos (from select_photos/1–6)
 assets/img/people/          Headshots (slug names, e.g. dongil-lee.jpg)
@@ -41,7 +42,7 @@ Every page has three marker pairs: `<!-- layout:head -->`, `<!-- layout:header -
 python3 _tools/layout.py
 ```
 
-**Also re-run it after any change to `assets/css/style.css` or `assets/js/nav.js`**: it stamps their links with a content hash (`style.css?v=…`) so browsers fetch the new file instead of a cached one (GitHub Pages caches for 10 minutes).
+**Also re-run it after any change to `assets/css/style.css`, `assets/js/nav.js` or `assets/js/lightbox.js`**: it stamps their links with a content hash (`style.css?v=…`) so browsers fetch the new file instead of a cached one (GitHub Pages caches for 10 minutes).
 
 It fixes relative paths for each page's depth and sets `aria-current="page"` (and `current-section` on the dropdown parent). New pages: copy an existing page (keep the markers), then re-run the script — it picks up every `index.html` outside `_*`, `.*` and `assets/`.
 
