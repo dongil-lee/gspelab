@@ -26,7 +26,7 @@ NAV = [
 
 # ?v= is a hash of the file, so browsers fetch the new copy after every change
 # instead of reusing a cached one (GitHub Pages caches for 10 minutes).
-HEAD = """<link rel="icon" type="image/png" href="{r}assets/img/favicon.png">
+HEAD = """<link rel="icon" type="image/png" href="{r}assets/img/favicon.png?v={fav_v}">
   <link rel="stylesheet" href="{r}assets/css/style.css?v={css_v}">
   <script src="{r}assets/js/nav.js?v={js_v}" defer></script>
   <script src="{r}assets/js/lightbox.js?v={lb_v}" defer></script>"""
@@ -34,7 +34,7 @@ HEAD = """<link rel="icon" type="image/png" href="{r}assets/img/favicon.png">
 HEADER = """<header class="site-header">
     <div class="container">
       <a class="brand" href="{home}">
-        <img src="{r}assets/img/logo/gspel-logo.png" width="600" height="197" alt="GSPE Lab">
+        <img src="{r}assets/img/logo/gspel-logo.png?v={logo_v}" width="600" height="219" alt="GSPE Lab">
         <span class="brand-text">
           <span class="brand-name">Global Strategy &amp; Political Economy Lab</span>
           <span class="brand-sub">KDI School of Public Policy and Management</span>
@@ -51,7 +51,7 @@ HEADER = """<header class="site-header">
 
 FOOTER = """<footer class="site-footer">
     <div class="container">
-      <img src="{r}assets/img/logo/gspel-mark.png" width="240" height="240" alt="">
+      <img src="{r}assets/img/logo/gspel-mark.png?v={mark_v}" width="240" height="240" alt="">
       <p><strong>Global Strategy &amp; Political Economy Lab</strong>
         KDI School of Public Policy and Management<br>
         263 Namsejong-ro, Sejong-si 30149, Republic of Korea</p>
@@ -116,6 +116,9 @@ def main():
     css_v = version("assets/css/style.css")
     js_v = version("assets/js/nav.js")
     lb_v = version("assets/js/lightbox.js")
+    fav_v = version("assets/img/favicon.png")
+    logo_v = version("assets/img/logo/gspel-logo.png")
+    mark_v = version("assets/img/logo/gspel-mark.png")
     for path in pages():
         page = os.path.dirname(path)
         page = page + "/" if page else ""
@@ -124,9 +127,9 @@ def main():
         full = os.path.join(ROOT, path)
         with open(full, encoding="utf-8") as f:
             html = f.read()
-        html = replace_block(html, "head", HEAD.format(r=r, css_v=css_v, js_v=js_v, lb_v=lb_v), path)
-        html = replace_block(html, "header", HEADER.format(r=r, home=home, items=render_nav(page, r, home)), path)
-        html = replace_block(html, "footer", FOOTER.format(r=r), path)
+        html = replace_block(html, "head", HEAD.format(r=r, css_v=css_v, js_v=js_v, lb_v=lb_v, fav_v=fav_v), path)
+        html = replace_block(html, "header", HEADER.format(r=r, home=home, logo_v=logo_v, items=render_nav(page, r, home)), path)
+        html = replace_block(html, "footer", FOOTER.format(r=r, mark_v=mark_v), path)
         with open(full, "w", encoding="utf-8") as f:
             f.write(html)
         print("updated", path)

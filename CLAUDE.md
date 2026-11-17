@@ -25,8 +25,8 @@ assets/js/lightbox.js       Click-to-enlarge overlay for any <a data-lightbox> w
 assets/img/hero.jpg         Home wall photo (from _source/Workshop/select_photos/main.jpeg)
 assets/img/workshop/        Workshop grid photos (from select_photos/1–12, same numbering)
 assets/img/people/          Headshots (slug names, e.g. dongil-lee.jpg)
-assets/img/logo/            Original logo files + web copies gspel-logo.png (header) and gspel-mark.png (footer)
-assets/img/favicon.png      From logo/small_logo_white.png
+assets/img/logo/            Original logo files + web copies: gspel-logo.png (header; from long_gspel_logo_black.png, transparent, trimmed, 600px wide) and gspel-mark.png (footer; from small_logo_white.png, cut to a circle, 240px)
+assets/img/favicon.png      From logo/small_logo_white.png, cut to a circle, 64px. layout.py version-tags the logos and favicon, so re-run it after replacing them
 _tools/layout.py            Regenerates the shared head/header/nav/footer in every page
 _source/                    Raw materials: bios, posters, papers, original photos
 _config.yml                 Jekyll config (excludes CLAUDE.md; _source/ and _tools/ are excluded automatically)
