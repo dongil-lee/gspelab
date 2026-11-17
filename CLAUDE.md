@@ -11,7 +11,7 @@ index.html                  Home: tagline, lab intro, wall photo, About the Lab 
 people/index.html           People landing — links to Current, Visiting, Past
 people/current/index.html   Current members (Faculty subsection; add a Student subsection when there are current students)
 people/visiting/index.html  Visiting scholars (faculty-style bio + "is visiting" note)
-people/past/index.html      Past members (Student Assistants, each with a "helped organize" note)
+people/past/index.html      Past members (Student Researchers, each with a "helped organize" note)
 research/index.html         Collaborative Research (working papers with abstracts, work in progress)
 workshop/index.html         Workshop intro, table of workshops (2027 upcoming, 2026, 2025), photo grid
 workshop/2026/index.html    2026 program (presenter names link to personal websites) + poster preview
