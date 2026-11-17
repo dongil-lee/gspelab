@@ -20,7 +20,7 @@ NAV = [
     ("Home", "", []),
     ("People", "people/", [("Current", "people/current/"), ("Visiting", "people/visiting/"), ("Past", "people/past/")]),
     ("Research", "research/", []),
-    ("Workshop", "workshop/", [("2026 (2nd)", "workshop/2026/"), ("2025 (1st)", "workshop/2025/")]),
+    ("Workshop", "workshop/", [("2026", "workshop/2026/"), ("2025", "workshop/2025/")]),
     ("Seminar", "seminar/", []),
 ]
 
